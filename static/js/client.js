@@ -11,3 +11,5 @@ const channel = await hop.channels.create(
 	// Channel ID; leave this field as null if you want an auto-generated ID
 	"group_chat_1"
 );
+
+console.log(69)

@@ -34,7 +34,7 @@ nano .env
 Sample layout of `.env` file
 ```bash
 DJANGO_SECRET_KEY='your key here'
-DEBUG='0'
+DJANGO_DEBUG='True'
 ```
 
 Every thing in the .env file is required to exist to avoid forgetting setup.

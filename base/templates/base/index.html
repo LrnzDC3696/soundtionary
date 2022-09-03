@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -13,31 +13,55 @@
     <title>Soundtionary!</title>
   </head>
 
-  <body class="flex place-content-center h-screen justify-center">
-    <div class="card w-96 bg-base-300 shadow-xl h-fit place-self-center">
-      <div
-        class="card-body items-center text-center flex-column justify-center"
+  <body>
+    <div class="place-content-center h-screen justify-center flex-col lg:flex">
+      <h1 class="hero-content text-5xl font-bold place-self-center">
+        Soundtionary!
+      </h1>
+      <div class="card w-96 bg-base-300 shadow-xl h-fit place-self-center m-4">
+        <div
+          class="card-body items-center text-center flex-column justify-center"
+        >
+          <h2 class="card-title">Choose your avatar!</h2>
+
+          <div class="flex flex-row w-full">
+            <img
+              id="haha"
+              src="https://avatars.dicebear.com/api/adventurer/.svg"
+              class="inline w-1/4 rounded m-2"
+            />
+            <input
+              id="text"
+              placeholder="Enter your name"
+              class="name inline input input-bordered w-3/4 max-w-xs mt-4"
+              oninput="lol()"
+            />
+          </div>
+
+          <div class="flex card-actions justify-end">
+            <button class="btn btn-primary">Join room</button>
+            <button class="btn btn-primary">Play</button>
+          </div>
+        </div>
+      </div>
+      <button
+        class="btn btn-outline btn-secondary w-fit place-self-center"
+        onclick="how()"
       >
-        <h2 class="card-title">Choose your avatar!</h2>
-
-        <div class="flex flex-row w-full">
-          <img
-            id="haha"
-            src="https://avatars.dicebear.com/api/adventurer/.svg"
-            class="inline w-1/4 rounded m-2"
-          />
-          <input
-            id="text"
-            placeholder="Enter your name"
-            class="name inline input input-bordered w-3/4 max-w-xs mt-4"
-            oninput="lol()"
-          />
-        </div>
-
-        <div class="flex card-actions justify-end">
-          <button class="btn btn-primary">Join room</button>
-          <button class="btn btn-primary">Play</button>
-        </div>
+        How to play
+      </button>
+      <div class="card">
+        <p
+          id="how"
+          style="visibility: hidden"
+          class="card-body bg-base-300 shadow-xl h-fit place-self-center m-4 rounded"
+        >
+          When its your turn to select a song, you will have to choose a song
+          from three options and play that song for 10-20 seconds, alternatively
+          when somebody else is playing a song you have to type your guess into
+          the chat to gain points, be quick, the earlier you guess a word the
+          more points you get!
+        </p>
       </div>
     </div>
   </body>
@@ -48,6 +72,12 @@
         "https://avatars.dicebear.com/api/adventurer/" +
         document.getElementById("text").value +
         ".svg";
+    }
+
+    function how() {
+      if (document.getElementById("how").style.visibility == "visible")
+        document.getElementById("how").style.visibility = "hidden";
+      else document.getElementById("how").style.visibility = "visible";
     }
   </script>
 </html>

@@ -35,8 +35,10 @@ Sample layout of `.env` file
 ```bash
 DJANGO_SECRET_KEY='your key here'
 DJANGO_DEBUG='True'
+HOP_PROJECT_TOKEN='your project key'
 ```
 
 Every thing in the .env file is required to exist to avoid forgetting setup.
-`SECRET_KEY` Used by the django as a key to securing signed data
-`DEBUG` Used to tell if the code is in local or on hosting. Set it to "True" if you want it to be true and anything else if not.
+`DJANGO_SECRET_KEY` Used by the django as a key to securing signed data
+`DJANGO_DEBUG` Used to tell if the code is in local or on hosting. Set it to "True" if you want it to be true and anything else if not.
+`HOP_PROJECT_TOKEN` Used to tell what hop project is being used. NOTE: from https://console.hop.io/project/settings/tokens

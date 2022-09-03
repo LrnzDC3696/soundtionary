@@ -1,12 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@2.24.0/dist/full.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
     <title>Soundtionary!</title>
   </head>
-  <body>
-      never gonna give you up never gonna let you down never gonna run around and desert you!
+
+  <body class="flex place-content-center h-screen justify-center">
+    <div class="card w-96 bg-base-300 shadow-xl h-fit place-self-center">
+      <div
+        class="card-body items-center text-center flex-column justify-center"
+      >
+        <h2 class="card-title">Choose your avatar!</h2>
+
+        <div class="flex flex-row w-full">
+          <img
+            id="haha"
+            src="https://avatars.dicebear.com/api/adventurer/.svg"
+            class="inline w-1/4 rounded m-2"
+          />
+          <input
+            id="text"
+            placeholder="Enter your name"
+            class="name inline input input-bordered w-3/4 max-w-xs mt-4"
+            oninput="lol()"
+          />
+        </div>
+
+        <div class="flex card-actions justify-end">
+          <button class="btn btn-primary">Join room</button>
+          <button class="btn btn-primary">Play</button>
+        </div>
+      </div>
+    </div>
   </body>
+
+  <script>
+    function lol() {
+      document.getElementById("haha").src =
+        "https://avatars.dicebear.com/api/adventurer/" +
+        document.getElementById("text").value +
+        ".svg";
+    }
+  </script>
 </html>

@@ -17,8 +17,12 @@
       type="text/javascript"
       src="{% static 'assets/AgoraRTC_N-4.14.0.js' %}"
     ></script>
-    <script type="text/javascript" src="{% static 'js/stream.js' %}"></script>
-    <script type="text/javascript" src="{% static 'js/client.js' %}"></script>
+    <script
+      type="typescript/javascript"
+      src="{% static 'js/client.js' %}"
+    ></script>
+    <!-- <script type="module" src="{% static 'js/stream.js' %}"></script> -->
+    <script type="text/typescript" src="{% static 'js/client.js' %}"></script>
   </head>
 
   <body>
@@ -133,17 +137,18 @@
           </div>
         </div>
       </div>
+
       <!-- Chat Box -->
-      <div class="card bg-base-300 w-2/3">
+      <div id="dialogue" class="card bg-base-300 w-2/3">
         <div class="alert alert-info w-fit m-2">
           <div>
-            <div><small>Skyhero</small></div>
+            <small>Skyhero</small>
             <span>Is it cheap thrills ?</span>
           </div>
         </div>
         <div class="alert alert-success w-fit m-2">
           <div>
-            <div><small class="block">LrnzDc</small></div>
+            <small>LrnzDc</small>
             <span>Happier</span>
           </div>
         </div>
@@ -159,4 +164,25 @@
       </div>
     </div>
   </body>
+
+  <script>
+    function woah() {
+      let data = check();
+      function message(data) {
+        document
+          .getElementById("dialogue")
+          .append(
+            '<div class="alert alert-info w-fit m-2">' +
+              "<div>" +
+              "<small>data.user</small>" +
+              "<span>data.message</span>" +
+              "</div>" +
+              "</div>"
+          );
+        console.log(data);
+      }pytho
+    }
+
+    setInterval(woah(), 1000);
+  </script>
 </html>

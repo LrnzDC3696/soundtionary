@@ -5,13 +5,20 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Soundtionary!</title>
+    <title>🎶 Soundtionary!</title>
     <!-- <link rel="stylesheet" href="style.css" /> -->
     <link
       href="https://cdn.jsdelivr.net/npm/daisyui@2.24.0/dist/full.css"
       rel="stylesheet"
       type="text/css"
     />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script
+      type="text/javascript"
+      src="{% static 'assets/AgoraRTC_N-4.14.0.js' %}"
+    ></script>
+    <script type="text/javascript" src="{% static 'js/stream.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/client.js' %}"></script>
   </head>
 
   <body>
@@ -30,6 +37,7 @@
               <!-- head -->
               <thead>
                 <tr>
+                  <th>Rank</th>
                   <th>Player</th>
                   <th>Score</th>
                   <th></th>
@@ -38,6 +46,7 @@
               <tbody>
                 <!-- row 1 -->
                 <tr>
+                  <th>#0</th>
                   <td>
                     <div class="flex items-center space-x-3">
                       <div class="avatar">
@@ -58,6 +67,7 @@
                 </tr>
                 <!-- row 2 -->
                 <tr>
+                  <th>#0</th>
                   <td>
                     <div class="flex items-center space-x-3">
                       <div class="avatar">
@@ -78,6 +88,7 @@
                 </tr>
                 <!-- row 3 -->
                 <tr>
+                  <th>#0</th>
                   <td>
                     <div class="flex items-center space-x-3">
                       <div class="avatar">
@@ -98,6 +109,7 @@
                 </tr>
                 <!-- row 4 -->
                 <tr>
+                  <th>#0</th>
                   <td>
                     <div class="flex items-center space-x-3">
                       <div class="avatar">
@@ -147,12 +159,4 @@
       </div>
     </div>
   </body>
-
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script
-    type="text/javascript"
-    src="{% static 'assets/AgoraRTC_N-4.14.0.js' %}"
-  ></script>
-  <script type="text/javascript" src="{% static 'js/stream.js' %}"></script>
-  <script type="text/javascript" src="{% static 'js/client.js' %}"></script>
 </html>

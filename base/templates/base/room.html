@@ -2,15 +2,124 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Soundtionary!</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@2.24.0/dist/full.css"
+      rel="stylesheet"
+      type="text/css"
+    />
   </head>
+
   <body>
-    <script type="text/javascript" src="{% static 'assets/AgoraRTC_N-4.14.0.js' %}"></script> 
-    <script type="text/javascript" src="{% static 'js/stream.js' %}"></script>
-    <script type="text/javascript" src="{% static 'js/client.js' %}"></script>
+    <h1 class="font-extrabold text-3xl m-4">Soundtionary!</h1>
+    <div class="card bg-base-300 w-1/4 m-3">
+      <div class="card-body">
+        <h2 class="font-bold">Time remaining</h2>
+        <span class="countdown">
+          <span style="--value: 51"></span>
+        </span>
+        <div class="overflow-x-auto w-full">
+          <table class="table w-full">
+            <!-- head -->
+            <thead>
+              <tr>
+                <th>Player</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- row 1 -->
+              <tr>
+                <td>
+                  <div class="flex items-center space-x-3">
+                    <div class="avatar">
+                      <div class="mask mask-squircle w-12 h-12">
+                        <img
+                          src="https://avatars.dicebear.com/api/adventurer/lol.svg"
+                          alt="Avatar Tailwind CSS Component"
+                        />
+                      </div>
+                    </div>
+                    <div>
+                      <div class="font-bold">Hart Hagerty</div>
+                    </div>
+                  </div>
+                </td>
+                <td></td>
+              </tr>
+              <!-- row 2 -->
+              <tr>
+                <td>
+                  <div class="flex items-center space-x-3">
+                    <div class="avatar">
+                      <div class="mask mask-squircle w-12 h-12">
+                        <img
+                          src="https://avatars.dicebear.com/api/adventurer/haha.svg"
+                          alt="Avatar Tailwind CSS Component"
+                        />
+                      </div>
+                    </div>
+                    <div>
+                      <div class="font-bold">Brice Swyre</div>
+                    </div>
+                  </div>
+                </td>
+                <td></td>
+              </tr>
+              <!-- row 3 -->
+              <tr>
+                <td>
+                  <div class="flex items-center space-x-3">
+                    <div class="avatar">
+                      <div class="mask mask-squircle w-12 h-12">
+                        <img
+                          src="https://avatars.dicebear.com/api/adventurer/hmm.svg"
+                          alt="Avatar Tailwind CSS Component"
+                        />
+                      </div>
+                    </div>
+                    <div>
+                      <div class="font-bold">Marjy Ferencz</div>
+                    </div>
+                  </div>
+                </td>
+                <td></td>
+              </tr>
+              <!-- row 4 -->
+              <tr>
+                <td>
+                  <div class="flex items-center space-x-3">
+                    <div class="avatar">
+                      <div class="mask mask-squircle w-12 h-12">
+                        <img
+                          src="https://avatars.dicebear.com/api/adventurer/yoo.svg"
+                          alt="Avatar Tailwind CSS Component"
+                        />
+                      </div>
+                    </div>
+                    <div>
+                      <div class="font-bold">Yancy Tear</div>
+                    </div>
+                  </div>
+                </td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
   </body>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script
+    type="text/javascript"
+    src="{% static 'assets/AgoraRTC_N-4.14.0.js' %}"
+  ></script>
+  <script type="text/javascript" src="{% static 'js/stream.js' %}"></script>
+  <script type="text/javascript" src="{% static 'js/client.js' %}"></script>
 </html>

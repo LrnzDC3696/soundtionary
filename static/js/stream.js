@@ -1,7 +1,9 @@
-const AGORA_APP_ID = '8b566586ca6c494ab335e9e241f6d24a'
-const AGORA_APP_CERTIFICATE = '69feabdaa3e4433f918f34b888e368be'
-const AGORA_TOKEN = '007eJxTYLD0sRQ+ffhguMOpA37N3OKfZSc8fHbvONvFZ2w25bN0SjIVGCySTM3MTC3MkhPNkk0sTRKTjI1NUy1TjUwM08xSjEwSO1SFkznKRZLPNk1gZGSAQBCfhSE3MTOPgQEAGmQe0Q=='
-const AGORA_CHANNEL = 'main'
+require('dotenv').config()
+
+const AGORA_APP_ID = process.env.AGORA_APP_ID
+const AGORA_APP_CERTIFICATE = process.env.AGORA_APP_CERTIFICATE
+const AGORA_TOKEN = process.env.AGORA_TOKEN
+const AGORA_CHANNEL = process.env.AGORA_CHANNEL
 
 // const AGORA_APP_ID = 'YOUR APP ID'
 // const AGORA_TOKEN = sessionStorage.getItem('token')
